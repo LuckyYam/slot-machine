@@ -34,7 +34,7 @@ class Results {
      */
     visualize(includeDiagonals = false) {
         const lines = this.lines.filter(line => !line.diagonal);
-        let visual = lines.map(line => line.symbols.map(s => s.display).join(' ')).join('\n');
+        let visual = lines.map(line => line.symbols.map(s => s.display).join(' : ')).join('\n');
 
         if (includeDiagonals) {
             const diagonals = this.lines.filter(line => line.diagonal);
